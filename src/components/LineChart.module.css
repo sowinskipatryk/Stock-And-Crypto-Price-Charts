@@ -1,4 +1,8 @@
 .chartBox {
     height: 400px;
     width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
 }

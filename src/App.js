@@ -1,10 +1,10 @@
 import './App.css';
-import StockPrices from './components/StockPrices';
+import ChartContainer from './components/ChartContainer';
 
 function App() {
   return (
     <div className="App">
-      <StockPrices />
+      <ChartContainer />
     </div>
   );
 }
