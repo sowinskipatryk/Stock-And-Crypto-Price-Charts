@@ -4,7 +4,7 @@ import redis
 import datetime
 
 URL = 'https://www.alphavantage.co/query'
-API_KEY = 'QQHENYSQOQ3GHMSA'
+API_KEY = ''
 
 
 @shared_task
