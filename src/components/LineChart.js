@@ -21,7 +21,7 @@ const LineChart = (props) => {
 
   return (
     <div className={styles.chartBox}>
-      <Line data={chartData} options={{ maintainAspectRatio: false }} />
+      {stockPrices.price.length !== 0 && <Line className={styles.chartLine} data={chartData} options={{ maintainAspectRatio: false }} />}
     </div>
   );
 }
