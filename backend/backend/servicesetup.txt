@@ -1,0 +1,7 @@
+celery -A backend.celery worker --loglevel=INFO  # WORKER
+celery -A backend beat --loglevel=INFO  # CELERY BEAT TASK SCHEDULER
+sudo su  # ROOT!
+sysctl vm.overcommit_memory=1  # MEMORY MANAGE
+usermod --shell /bin/bash redis  # MAKE REDIS USER LOGGABLE
+su - redis  # LOG AS REDIS
+redis-server  # REDIS MESSAGE BROKER + DATABASE
