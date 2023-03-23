@@ -5,9 +5,13 @@ function StockPrices() {
   const [stockPrices, setStockPrices] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/get_stocks/')
-      .then(response => response.json())
-      .then(data => setStockPrices(data))
+    const interval = setInterval(() => {
+      fetch('http://localhost:8000/api/get_stocks/')
+        .then(response => response.json())
+        .then(data => setStockPrices(data));
+    }, 20000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
